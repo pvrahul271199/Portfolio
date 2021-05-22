@@ -4,6 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    user-select: none;
 }
 
 :root {
@@ -32,6 +33,12 @@ nav ul li {
     cursor: pointer;
     outline: none;
     border: none;
+    user-select: none;
+}
+
+#sound:focus {
+    outline: none;
+    border: none;
 }
 
 #particles-js {
@@ -51,11 +58,6 @@ nav ul li {
     background-color: #00aa00;
 }
 
-
-
-
-
-
 body {
     height: 100vh;
     font-family: 'Ubuntu Mono', monospace;
@@ -63,6 +65,7 @@ body {
     color: #ccc;
     font-size: 1.2rem;
     line-height: 1.6;
+    user-select: none;
 }
 
 h1 {
@@ -116,6 +119,7 @@ input[type=text] {
     margin-top: 1rem;
     font-style: italic;
     letter-spacing: -2px;
+    user-select: none;
 }
 
 
