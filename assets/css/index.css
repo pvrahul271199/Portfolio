@@ -39,6 +39,7 @@ nav ul li {
 #sound:focus {
     outline: none;
     border: none;
+    user-select: none;
 }
 
 #particles-js {
