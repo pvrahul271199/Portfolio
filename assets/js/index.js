@@ -8,74 +8,76 @@ const audio = document.querySelector("#audio");
 const icon = document.querySelector("#sound");
 const form = document.querySelector('#form');
 const input = document.querySelector('#input');
+const redirect = window.location;
 
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
 particlesJS.load('particles-js', 'assets/particles.json', function () {
     console.log('callback - particles.js config loaded');
 });
 
-    input.value = "$ or type 'cd github' here"
+input.value = "$ or type 'cd github' here"
 
-    const openBox = (name) => {
-        const fbBox = new WinBox({
-            title: `${name}`,
-            x: "center",
-            y: "center",
-            width: "90%",
-            height: "60%",
-            html: `$~ Connecting to ${name.toLowerCase()}.....`,
-            onfocus: function () {
-                this.setBackground('#000')
-            },
-            onblur: function () {
-                this.setBackground('#777')
-            }
-        })
-    }
-
-    input.addEventListener('click', () => {
-        input.value = "$~ "
-        console.log(window.location)
+const openBox = (name) => {
+    const fbBox = new WinBox({
+        title: `${name}`,
+        x: "center",
+        y: "center",
+        width: "90%",
+        height: "60%",
+        html: `$~ Connecting to ${name.toLowerCase()}.....`,
+        onfocus: function () {
+            this.setBackground('#000')
+        },
+        onblur: function () {
+            this.setBackground('#777')
+        }
     })
+}
+
+input.addEventListener('click', () => {
+    input.value = "$~ "
+    console.log(window.location)
+})
 
 
 form.addEventListener('submit', () => {
-    
+
     const value = input.value.toLowerCase();
-     if(value === '$~ cd facebook'){
-        let name = "Facebook" ;  
+    if (value === '$~ cd facebook') {
+        let name = "Facebook";
         let url = "http://www.facebook.com/pvrahul.271199/";
         form.action = url;
-        openBox(name);   
+        openBox(name);
 
-    } else if(value === '$~ cd github'){
-        let name = "Github" ;  
+    } else if (value === '$~ cd github') {
+        let name = "Github";
         let url = "https://github.com/pvrahul271199/";
-        form.action = url;
-        openBox(name); 
+        window.location.origin = "https://www.github.com";
+        window.location.pathname = "/pvrahul271199/";
+        window.location.href = url
+        // form.action = url;
+        openBox(name);
 
-    } else if(value === '$~ cd instagram'){
-        let name = "Instagram" ;  
+    } else if (value === '$~ cd instagram') {
+        let name = "Instagram";
         let url = "https://www.instagram.com/rah_._ul/";
         form.action = url;
         console.log(form.action)
-        openBox(name); 
+        openBox(name);
 
-    }
-    else if(value === '$~ cd whatsapp'){
-        let name = "Whatsapp" ;  
+    } else if (value === '$~ cd whatsapp') {
+        let name = "Whatsapp";
         let url = "https://api.whatsapp.com/send?phone=+919645299640";
         form.action = url;
-        openBox(name); 
+        openBox(name);
 
-    } else if(value === '$~ cd email'){
-        let name = "Gmail" ;  
+    } else if (value === '$~ cd email') {
+        let name = "Gmail";
         let url = "mailto:pvrahul.271199@gmail.com";
         form.action = url;
-        openBox(name); 
+        openBox(name);
 
-    } 
-    else{
+    } else {
         input.value = "$ error value"
         const wrongComm = new WinBox({
             title: `Command Error`,
@@ -91,7 +93,7 @@ form.addEventListener('submit', () => {
                 this.setBackground('#777')
             }
         })
-        
+
     }
 })
 
@@ -164,4 +166,3 @@ icon.addEventListener('click', () => {
         audio.pause();
     }
 })
-
