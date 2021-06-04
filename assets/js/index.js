@@ -165,3 +165,119 @@ icon.addEventListener('click', () => {
         audio.pause();
     }
 })
+
+// class Pets {
+//     constructor(name, age, func) {
+//         this.name = name;
+//         this.age = age;
+//         this.func = func();
+//     }
+//     getAge(arg) {
+//         return `Age of ${this.name} is ${this.age} and arg is ${arg}`
+
+//     }
+//     static name() {
+//         return `Hello and arg `
+//     }
+// }
+
+// const dog1 = new Pets("Golu", 3, () => {
+//     console.log("Constructor Function")
+// })
+
+// function print(name, callback) {
+//     console.log(name)
+//     callback()
+// };
+
+
+// const scan = () => {
+//     console.log("Callback Executed")
+// }
+
+// // print("rahul",scan)
+
+// const books = {
+//     name: 'The Alchemist',
+//     price: 66,
+//     getDetails: function (event, callback) {
+//         console.log(`${this.name}`, `${this.price}`)
+//         console.log("Event has completed now callback can be executed", event)
+//         const req = {
+//             body: "hello",
+//             send: "sent"
+//         };
+//         const res = 5;
+//         callback(req, res);
+//     }
+
+// }
+
+// books.getDetails('Event', (req, res) => {
+//     console.log("Executed Callback")
+//     console.log(`${req.send} and ${res}`)
+// })
+
+// // console.log(typeof books)
+// // const abcd = new String({})
+// // console.log(typeof abcd)
+
+// let newPromise = new Promise((resolve, reject) => {
+//     const a = 5;
+//     if (a == 5) {
+//         resolve();
+//     } else {
+//         reject()
+//     }
+// })
+
+
+
+
+
+// XML req
+// // const request = async () => {
+// //     const url = 'https://api.coingecko.com/api/v3/ping';
+// //     let response = new XMLHttpRequest();
+// //     response.onload = async () => {
+// //         console.log("Okay")
+// //     }
+// //     response.onprogress = () => {
+// //         console.log("Perfect Okay")
+// //     }
+// //     response.onerror = () => {
+// //         console.log("Error Obtained")
+// //     }
+// //     response.open('get', url)
+// //     response.send();
+
+// // }
+
+
+// const reqFunc = async () => {
+//     const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd';
+//     let request = await fetch(url);
+//     let response = await request.json();
+//     let coin = 'bitcoin';
+//     for (let datas of response) {
+//         const coinapi = datas.id;
+
+//         if (coinapi === coin.toLowerCase()) {
+
+//             console.log(datas.symbol)
+//             console.log(datas.name)
+//             console.log(datas.image)
+//             console.log(datas.current_price)
+//             console.log(datas.market_cap)
+//             console.log(datas.rank)
+//             console.log(datas.total_volume)
+//             console.log(datas.price_change_percentage_24h)
+//             // console.log(coin.id')
+//         }
+//     }
+//     console.log(response[0])
+//     console.log(typeof request);
+
+// }
+
+// reqFunc()
