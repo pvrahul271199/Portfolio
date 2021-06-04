@@ -46,42 +46,34 @@ form.addEventListener('submit', () => {
     if (value === '$~ cd facebook') {
         let name = "Facebook";
         let url = "http://www.facebook.com/pvrahul.271199/";
-        window.location.origin = "https://www.facebook.com";
-        window.location.pathname = "/pvrahul.271199/";
-        window.location.href = url
+        form.action = url;
         openBox(name);
 
     } else if (value === '$~ cd github') {
         let name = "Github";
         let url = "https://github.com/pvrahul271199/";
-        window.location.origin = "https://www.github.com";
-        window.location.pathname = "/pvrahul271199/";
-        window.location.href = url
+        // window.location.hostname = "https://www.github.com"
+        // window.location.pathname = "/pvrahul271199/"
+        form.action = url;
         openBox(name);
 
     } else if (value === '$~ cd instagram') {
         let name = "Instagram";
         let url = "https://www.instagram.com/rah_._ul/";
-        window.location.origin = "https://www.instagram.com";
-        window.location.pathname = "/rah_._ul/";
-        window.location.href = url;
+        form.action = url;
+        console.log(form.action)
         openBox(name);
 
     } else if (value === '$~ cd whatsapp') {
         let name = "Whatsapp";
         let url = "https://api.whatsapp.com/send?phone=+919645299640";
-        window.location.origin = "https://api.whatsapp.com";
-        window.location.pathname = "/send?phone=+919645299640";
-        window.location.href = url
+        form.action = url;
         openBox(name);
 
     } else if (value === '$~ cd email') {
         let name = "Gmail";
         let url = "mailto:pvrahul.271199@gmail.com";
-        // window.location.origin = "https://api.whatsapp.com";
-        // window.location.pathname = "/send?phone=+919645299640";
-        window.location.href = url
-
+        form.action = url;
         openBox(name);
 
     } else {
