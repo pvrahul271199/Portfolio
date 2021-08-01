@@ -72,7 +72,7 @@ form.addEventListener('submit', () => {
 
     } else if (value === '$~ cd email') {
         let name = "Gmail";
-        let url = "mailto:pvrahul.271199@gmail.com";
+        let url = "mailto:pvrahul9@protonmail.com";
         form.action = url;
         openBox(name);
 
