@@ -43,25 +43,22 @@ input.addEventListener('click', () => {
 form.addEventListener('submit', () => {
 
     const value = input.value.toLowerCase();
-    if (value === '$~ cd facebook') {
-        let name = "Facebook";
-        let url = "http://www.facebook.com/pvrahul.271199/";
+    if (value === '$~ cd linkedin') {
+        let name = "LinkedIn";
+        let url = "https://www.linkedin.com/in/pvrahul/";
         form.action = url;
         openBox(name);
 
     } else if (value === '$~ cd github') {
         let name = "Github";
         let url = "https://github.com/pvrahul271199/";
-        // window.location.hostname = "https://www.github.com"
-        // window.location.pathname = "/pvrahul271199/"
         form.action = url;
         openBox(name);
 
     } else if (value === '$~ cd instagram') {
         let name = "Instagram";
-        let url = "https://www.instagram.com/rah_._ul/";
+        let url = "https://www.instagram.com/rahhxl/";
         form.action = url;
-        console.log(form.action)
         openBox(name);
 
     } else if (value === '$~ cd whatsapp') {
@@ -72,7 +69,7 @@ form.addEventListener('submit', () => {
 
     } else if (value === '$~ cd email') {
         let name = "Gmail";
-        let url = "mailto:pvrahul9@protonmail.com";
+        let url = "mailto:rahulpvconnect@gmail.com?subject=Hello%20Rahul&body=I%27d%20like%20to%20connect%20with%20you.";
         form.action = url;
         openBox(name);
 
